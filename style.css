@@ -1,0 +1,176 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+
+  /* padding: 0 20px; */
+}
+
+/* Navbar styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgb(227, 236, 91);
+}
+
+.navbar-logo {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar-button {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* gap: 20px; */
+}
+
+.navbar-button li {
+  position: relative;
+}
+
+.navbar-button li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #4caf50;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid #4caf50;
+  padding: 10px 20px;
+}
+
+.navbar-button li a:hover {
+  background-color: #45a;
+}
+
+/* Navbar styling */
+
+/* Hero styling */
+.hero {
+  display: flex;
+  padding: 10px 10px;
+  background-color: antiquewhite;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+a.hero-button {
+  cursor: pointer;
+  margin-right: 200px;
+  padding: 15px 15px;
+  background-color: #ff6347;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+a.hero-button:hover {
+  background-color: beige;
+  color: #ff6347;
+}
+
+/* Hero Syling */
+
+/* Features styling */
+
+.features {
+  background-color: rgb(250, 103, 103);
+  padding: 20px 5px;
+}
+.title-features {
+  text-align: center;
+}
+
+.card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.feature {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(33.333% - 20px); /* Lebar kartu untuk 3 kolom */
+  transition: box-shadow 0.3s ease;
+}
+/* Features styling */
+
+/* Contact styling */
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(117, 164, 218);
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.contact-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+
+  background-color: #ff6347;
+}
+/* Contact styling */
+
+/* Footer Styling */
+.footer {
+  height: 200px;
+  display: flex;
+  padding: 20px;
+
+  background-color: #a09595;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}

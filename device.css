@@ -1,0 +1,77 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Back button styling */
+.back {
+  margin: 50px 0;
+}
+.back-button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.back-button:hover {
+  background-color: rgb(78, 78, 78);
+}
+
+/* Back button styling */
+
+/* Card styling */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-device {
+  background-color: antiquewhite;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+}
+.card-device img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-location {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  background-color: rgb(44, 128, 238);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.card-location a:hover {
+  background-color: rgb(74, 147, 243);
+}

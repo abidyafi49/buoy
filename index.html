@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta nagime="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Device</title>
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="device.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="back">
+        <a href="/index.html" class="back-button">Kembali</a>
+      </div>
+
+      <div class="card">
+        <div class="card-device">
+          <img
+            src="/assets/hero-img-2.png"
+            alt="Buoy Image"
+            class="card-image"
+          />
+          <div class="card-detail">
+            <h1 class="card-title">Buoy 1</h1>
+            <p>Turbiditas : <span id="turbiditas"></span></p>
+            <p>Suhu : <span id="suhu"></span></p>
+            <p>Humiditas : <span id="humidity"></span></p>
+            <p>X : <span id="gyroX"></span></p>
+            <p>Y : <span id="gyroY"></span></p>
+            <p>Z : <span id="gyroZ"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
