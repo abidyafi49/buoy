@@ -1,77 +1,132 @@
-body {
-  font-family: "Poppins", sans-serif;
+/* Reset dan Font */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
+body {
+  background-color: #f0f0f0; /* Anda bisa mengganti warna latar sesuai keinginan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Utama */
 .container {
-  max-width: 768px;
-  margin: 0 auto;
-  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px;
 }
 
-/* Back button styling */
-.back {
-  margin: 50px 0;
-}
-.back-button {
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  border-radius: 8px;
-  padding: 10px 15px;
+/* Judul */
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 2.5em;
 }
 
-.back-button:hover {
-  background-color: rgb(78, 78, 78);
+/* Section Environmental Data */
+.environmental-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
 }
 
-/* Back button styling */
+/* Section Gyroscope Data */
+.gyroscope-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
 
-/* Card styling */
+/* Kartu */
 .card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
 }
 
-.card-device {
-  background-color: antiquewhite;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 20px;
-}
-.card-device img {
-  width: 200px;
-  display: block;
-  margin: 0 auto;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.card-location {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Judul Kartu */
+.card h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.location {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+/* Data Kartu */
+.card p {
+  font-size: 2em;
+  color: #007BFF;
 }
 
-.card-location {
-  text-decoration: none;
-  display: inline-block;
-  color: white;
-  background-color: rgb(44, 128, 238);
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 1.8em;
+  }
+
+  /* Layout Adjustment for Smaller Screens */
+  .environmental-data, .gyroscope-data {
+    grid-template-columns: 1fr;
+  }
+
 }
-.card-location a:hover {
-  background-color: rgb(74, 147, 243);
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 1.5em;
+  }
+
+
 }

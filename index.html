@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta nagime="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Device</title>
+    <title>Buoy Monitoring Dashboard</title>
     <!-- Option 1: Include in HTML -->
     <link
       rel="stylesheet"
@@ -13,30 +13,45 @@
   </head>
   <body>
     <div class="container">
-      <div class="back">
-        <a href="/index.html" class="back-button">Kembali</a>
-      </div>
+      <h1 class="title">Buoy Monitoring</h1>
 
-      <div class="card">
-        <div class="card-device">
-          <img
-            src="/assets/hero-img-2.png"
-            alt="Buoy Image"
-            class="card-image"
-          />
-          <div class="card-detail">
-            <h1 class="card-title">Buoy 1</h1>
-            <p>Turbiditas : <span id="turbiditas"></span></p>
-            <p>Suhu : <span id="suhu"></span></p>
-            <p>Humiditas : <span id="humidity"></span></p>
-            <p>X : <span id="gyroX"></span></p>
-            <p>Y : <span id="gyroY"></span></p>
-            <p>Z : <span id="gyroZ"></span></p>
-          </div>
+      <section class="environmental-data">
+        <div class="card">
+          <h2>Temperature</h2>
+          <p><span id="suhu">--</span> °C</p>
         </div>
-      </div>
+
+        <div class="card">
+          <h2>Humidity</h2>
+          <p><span id="humidity">--</span> %</p>
+        </div>
+
+        <div class="card">
+          <h2>Turbidity</h2>
+          <p><span id="turbiditas">--</span></p>
+        </div>
+      </section>
+
+      <section class="gyroscope-data">
+        <div class="card">
+          <h2>Gyroscope X</h2>
+          <p><span id="gyroX">--</span></p>
+        </div>
+
+        <div class="card">
+          <h2>Gyroscope Y</h2>
+          <p><span id="gyroY">--</span></p>
+        </div>
+
+        <div class="card">
+          <h2>Gyroscope Z</h2>
+          <p><span id="gyroZ">--</span></p>
+        </div>
+      </section>
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="index.js"></script>
   </body>
