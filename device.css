@@ -12,7 +12,7 @@ body {
   color: #333; /* Light mode text color */
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 30px;
   min-height: 100vh;
   transition: background-color 0.3s, color 0.3s;
 }
