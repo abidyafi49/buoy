@@ -6,7 +6,6 @@ let gyroX = document.getElementById("gyroX");
 let gyroY = document.getElementById("gyroY");
 let gyroZ = document.getElementById("gyroZ");
 
-
 // MQTT broker configuration
 const clientId = "mqttjs_" + Math.random().toString(16).substr(2, 8);
 const url = "wss://broker.emqx.io:8084/mqtt";
@@ -29,6 +28,18 @@ const options = {
   },
 };
 
+const toggleDarkMode = () => {
+  document.body.classList.toggle('dark-mode');
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  const icon = document.getElementById('dark-mode-toggle').querySelector('i');
+  icon.classList.toggle('bi-moon', !isDarkMode);
+  icon.classList.toggle('bi-sun', isDarkMode);
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  toggleButton.addEventListener('click', toggleDarkMode);
+});
 
 console.log("Connecting MQTT client...");
 const client = mqtt.connect(url, options);
@@ -76,7 +87,6 @@ client.on("message", (topic, message) => {
         gyroZ.innerText = `${data.Z}`;
         gyroX.innerText = `${data.X}`;
         gyroY.innerText = `${data.Y}`;
-
       } else {
         console.error("Unexpected data structure:", data);
       }
@@ -85,4 +95,3 @@ client.on("message", (topic, message) => {
     }
   }
 });
-

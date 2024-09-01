@@ -8,11 +8,19 @@
 
 /* Body Styling */
 body {
-  background-color: #f0f0f0; /* Anda bisa mengganti warna latar sesuai keinginan */
+  background-color: #f0f0f0; /* Light mode background color */
+  color: #333; /* Light mode text color */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #121212; /* Dark mode background color */
+  color: #e0e0e0; /* Dark mode text color */
 }
 
 /* Container Utama */
@@ -22,12 +30,44 @@ body {
   padding: 40px;
 }
 
-/* Judul */
-.title {
-  text-align: center;
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 40px;
-  color: #333;
+}
+
+.title {
   font-size: 2.5em;
+  color: #333;
+  transition: color 0.3s;
+}
+
+body.dark-mode .title {
+  color: #e0e0e0; /* Dark mode title color */
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle {
+  color: #e0e0e0;
+}
+
+#dark-mode-toggle:hover {
+  color: #0056b3;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+  color: #a0a0a0;
 }
 
 /* Section Environmental Data */
@@ -49,16 +89,28 @@ body {
 
 /* Kartu */
 .card {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Light mode card background */
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.2s;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+body.dark-mode .card {
+  background-color: #1e1e1e; /* Dark mode card background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon dalam Card */
+.card i {
+  font-size: 3em; /* Default icon size */
+  color: #007bff; /* Light mode icon color */
+  margin-bottom: 15px;
+}
+
+body.dark-mode .card i {
+  color: #64b5f6; /* Dark mode icon color */
 }
 
 /* Judul Kartu */
@@ -66,12 +118,21 @@ body {
   font-size: 1.5em;
   color: #333;
   margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+body.dark-mode .card h2 {
+  color: #e0e0e0; /* Dark mode card title color */
 }
 
 /* Data Kartu */
 .card p {
   font-size: 2em;
-  color: #007BFF;
+  color: #007bff; /* Light mode data color */
+}
+
+body.dark-mode .card p {
+  color: #90caf9; /* Dark mode data color */
 }
 
 /* Responsive Design */
@@ -89,6 +150,10 @@ body {
     padding: 20px;
   }
 
+  .card i {
+    font-size: 5em; /* Larger icon size for medium screens */
+  }
+
   .card h2 {
     font-size: 1.3em;
     margin-bottom: 10px;
@@ -99,10 +164,10 @@ body {
   }
 
   /* Layout Adjustment for Smaller Screens */
-  .environmental-data, .gyroscope-data {
+  .environmental-data,
+  .gyroscope-data {
     grid-template-columns: 1fr;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -119,6 +184,10 @@ body {
     padding: 15px;
   }
 
+  .card i {
+    font-size: 3em; /* Adjusted icon size for small screens */
+  }
+
   .card h2 {
     font-size: 1.2em;
     margin-bottom: 8px;
@@ -127,6 +196,4 @@ body {
   .card p {
     font-size: 1.5em;
   }
-
-
 }

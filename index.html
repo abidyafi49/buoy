@@ -4,30 +4,35 @@
     <meta charset="UTF-8" />
     <meta nagime="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buoy Monitoring Dashboard</title>
-    <!-- Option 1: Include in HTML -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
+
     <link rel="stylesheet" href="device.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Buoy Monitoring</h1>
+      <div class="header">
+        <h1 class="title">Buoy Monitoring</h1>
+        <button id="dark-mode-toggle" title="Toggle Dark Mode">
+          <i class="bi bi-moon"></i>
+        </button>
+      </div>
 
       <section class="environmental-data">
         <div class="card">
-          <h2>Temperature</h2>
+          <i class="bi bi-thermometer-high"></i>
           <p><span id="suhu">--</span> °C</p>
         </div>
 
         <div class="card">
-          <h2>Humidity</h2>
+          <i class="bi bi-droplet"></i>
           <p><span id="humidity">--</span> %</p>
         </div>
 
         <div class="card">
-          <h2>Turbidity</h2>
+          <i class="bi bi-water"></i>
           <p><span id="turbiditas">--</span></p>
         </div>
       </section>
@@ -50,8 +55,6 @@
       </section>
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="index.js"></script>
   </body>
